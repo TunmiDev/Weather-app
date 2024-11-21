@@ -1,9 +1,10 @@
 import React from "react";
+import Weather from "./Components/Weather";
 
 const App = () => {
   return (
     <div className="App">
-      <div className="container"></div>
+      <Weather />
     </div>
   );
 };
