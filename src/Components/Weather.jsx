@@ -1,5 +1,6 @@
 import React from "react";
 import "./Weather.css";
+import image from "../../src/assets/image.png";
 
 const Weather = () => {
   return (
@@ -11,6 +12,7 @@ const Weather = () => {
               type="search"
               placeholder="Enter a city..."
               className="form-control"
+              autoFocus="on"
             />
           </div>
           <div className="col-3">
@@ -24,10 +26,15 @@ const Weather = () => {
         <li>Mostly Cloudy</li>
       </ul>
 
-      <div className="row">
+      <div className="row mt-3">
         <div className="col-6">
-          <img src="" alt="" />
-          6℃
+          <div className="clearfix">
+            <img src={image} alt="Mostly Cloudy" className="float-left" />
+            <div className="float-left">
+              <span className="temperature">6</span>
+              <span className="unit">℃</span>
+            </div>
+          </div>
         </div>
         <div className="col-6">
           <ul>
