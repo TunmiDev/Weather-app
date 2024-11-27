@@ -1,9 +1,14 @@
 .App {
   max-width: 600px;
   margin: 30px auto;
+  background-image: url(../src/assets/pic.jpg);
+  image-orientation: flip;
+  border: 10px solid #0b5ed7;
+  border-radius: 50px;
 }
 .App footer {
-  font-size: 17px;
+  font-size: 13px;
   margin: 30px 0;
   text-align: center;
+  color: #fff;
 }
