@@ -18,7 +18,7 @@ const App = () => {
           </a>{" "}
           and {""}
           {""}
-          <a href="https://weather-app-9vzt.onrender.com">hosted on Netlify.</a>
+          <a href="https://weather-app-9vzt.onrender.com">hosted on Render.</a>
         </footer>
       </div>
     </div>

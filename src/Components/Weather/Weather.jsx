@@ -8,22 +8,32 @@ const Weather = (props) => {
   const [weatherData, setweatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
+    console.log("API Response:", response.data);
     setweatherData({
       ready: true,
-      temperature: response.data.main.temp,
+      coordinates: response.data.coordinates,
+      temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
-      city: response.data.name,
-      humidity: response.data.main.humidity,
-      description: response.data.weather[0].description,
-      icon: response.data.weather[0].icon,
-      date: new Date(response.data.dt * 1000),
+      city: response.data.city,
+      humidity: response.data.temperature.humidity,
+      description: response.data.condition.description,
+      icon: response.data.condition.icon_url,
+      date: new Date(response.data.time * 1000),
     });
   }
   function search() {
-    const apiKey = "d3e83db17624a324ad9629f2d4980ecf";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiKey = "41b39faeco43443c5c35d963td510b86";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
-    axios.get(apiUrl).then(handleResponse);
+    axios
+      .get(apiUrl)
+      .then(handleResponse)
+      .catch((error) => {
+        console.log("Error fetching weather data:", error);
+        alert(
+          "Could not fetch weather data. Please check the city name or try again later."
+        );
+      });
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -52,11 +62,11 @@ const Weather = (props) => {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
-    search();
+    search(); //Fetches data for default city
     return "Loading...";
   }
 };
