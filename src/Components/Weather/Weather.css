@@ -85,4 +85,8 @@
     font-size: 14px;
     padding: 6px 10px;
   }
+  .Weather {
+    padding: 8px;
+    border-radius: 2px;
+  }
 }
