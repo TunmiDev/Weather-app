@@ -18,7 +18,9 @@ const App = () => {
           </a>{" "}
           and {""}
           {""}
-          <a href="https://weather-app-9vzt.onrender.com">hosted on Render.</a>
+          <a href="https://weather-62qg8ibaz-tunmidevs-projects.vercel.app/">
+            hosted on Vercel.
+          </a>
         </footer>
       </div>
     </div>
