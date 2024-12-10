@@ -6,6 +6,7 @@
   padding: 16px;
   border-radius: 4px;
   align-items: center;
+  margin: auto;
 }
 
 .Weather h1 {
@@ -88,5 +89,6 @@
   .Weather {
     padding: 8px;
     border-radius: 2px;
+    margin: 0 15px;
   }
 }
