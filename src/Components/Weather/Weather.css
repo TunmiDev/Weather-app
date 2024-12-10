@@ -62,7 +62,10 @@
   font-size: 16px; /* Text size */
   width: auto; /* Default width */
 }
-
+.btn:hover {
+  background-color: #0b5ed7;
+  color: #000000;
+}
 /*Mobile view*/
 @media (max-width: 375px) {
   .Weather .col-9 {
