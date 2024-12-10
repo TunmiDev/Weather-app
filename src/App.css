@@ -5,6 +5,8 @@
   image-orientation: flip;
   border: 10px solid #0b5ed7;
   border-radius: 50px;
+  justify-content: center;
+  align-items: center;
 }
 .App footer {
   font-size: 13px;

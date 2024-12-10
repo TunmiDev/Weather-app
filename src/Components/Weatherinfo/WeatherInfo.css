@@ -1,0 +1,25 @@
+@media (max-width: 375px) {
+  .weatherInfo h1 {
+    font-size: 22px;
+  }
+  .weatherInfo ul li {
+    font-size: 17px;
+  }
+  .weatherInfo .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .weatherInfo .col-6 {
+    margin-bottom: 15px; /*Adds spacing btw stacked elements*/
+  }
+  .weatherInfo .clearfix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .weatherInfo .float-left {
+    float: none; /*It disables float on smaller screens*/
+    margin-bottom: 10px;
+  }
+}
